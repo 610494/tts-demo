@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parler-TTS: Emotion & Text Disentanglement Demo</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: 0 auto; padding: 20px; color: #333; }
+        h1 { border-bottom: 2px solid #eaecef; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #dfe2e5; padding: 12px; text-align: left; vertical-align: middle; }
+        th { background-color: #f6f8fa; font-weight: 600; }
+        audio { width: 220px; height: 40px; }
+        .text-content { font-style: italic; color: #555; }
+        .desc-content { font-family: monospace; font-size: 13px; color: #0366d6; background-color: #f1f8ff; padding: 6px; border-radius: 4px; display: block; }
+        .badge { background: #28a745; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; display: inline-block; margin-top: 5px; }
+        .nav-link { display: inline-block; margin-bottom: 20px; font-weight: bold; color: #0366d6; text-decoration: none; }
+        .nav-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="nav-link">← Back to Main Menu</a>
+    <h1>Parler-TTS (Mini-Expresso): Text-Driven Emotion Control</h1>
+    <p>This page demonstrates the expressive capabilities of the Parler-TTS model. Instead of reference audio, speaker identity and emotional tone are controlled entirely via natural language descriptions.</p>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 15%">Speaker & Emotion</th>
+                <th style="width: 30%">Target Text (Content)</th>
+                <th style="width: 35%">Style Description (Prompt)</th>
+                <th style="width: 20%">Generated Audio (Result)</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jenna's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Angry_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jenna's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Angry_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jenna's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Angry_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jenna's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Happy_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jenna's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Happy_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jenna's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Happy_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jenna's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Neutral_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jenna's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Neutral_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jenna's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Neutral_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jenna's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Sad_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jenna's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Sad_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jenna's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Sad_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jenna's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Surprise_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jenna's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Surprise_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jenna</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jenna's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jenna_Surprise_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Lea's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Angry_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Lea's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Angry_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Lea's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Angry_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Lea's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Happy_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Lea's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Happy_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Lea's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Happy_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Lea's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Neutral_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Lea's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Neutral_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Lea's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Neutral_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Lea's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Sad_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Lea's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Sad_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Lea's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Sad_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Lea's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Surprise_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Lea's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Surprise_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Lea</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Lea's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Lea_Surprise_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Gary's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Angry_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Gary's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Angry_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Gary's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Angry_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Gary's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Happy_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Gary's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Happy_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Gary's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Happy_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Gary's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Neutral_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Gary's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Neutral_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Gary's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Neutral_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Gary's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Sad_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Gary's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Sad_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Gary's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Sad_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Gary's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Surprise_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Gary's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Surprise_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Gary</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Gary's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Gary_Surprise_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jon's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Angry_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jon's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Angry_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Angry</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jon's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Angry_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jon's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Happy_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jon's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Happy_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Happy</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jon's voice is happy, enthusiastic, and highly energetic, speaking quite fast, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Happy_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jon's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Neutral_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jon's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Neutral_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Neutral</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jon's voice is calm, professional, and steady, speaking at a moderate pace, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Neutral_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jon's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Sad_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jon's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Sad_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Sad</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jon's voice is sad, whispering, and low-energy, taking frequent pauses, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Sad_P3_Tech.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Oh my goodness, you won't believe what just happened! We actually got the funding for our research project! Let's celebrate right now!</td>
+                <td><span class="desc-content">Jon's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Surprise_P1_Joy.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">I... I didn't think it would end this way. Everything we built over the last few years... it's just gone. Just like that.</td>
+                <td><span class="desc-content">Jon's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Surprise_P2_Grief.wav"></audio></td>
+            </tr>
+            <tr>
+                <td><b>Speaker Jon</b><br><span class="badge">Surprise</span></td>
+                <td class="text-content">Automatic speech recognition relies heavily on extracting acoustic features from raw audio signals, converting continuous waveforms into discrete tokens.</td>
+                <td><span class="desc-content">Jon's voice is amazed and highly surprised, with a dynamic and expressive tone, with a very close recording that almost has no background noise.</span></td>
+                <td><audio controls preload="none" src="audio/Jon_Surprise_P3_Tech.wav"></audio></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
