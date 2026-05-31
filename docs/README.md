@@ -16,7 +16,11 @@ The goal of this experiment is to evaluate the 3D Controllability (Speaker × Em
 * **Control Method:** Driven by extracting acoustic features from a Reference Audio prompt.
 * **Methodology:** We utilized reference audio from the ESD dataset. The model must mimic the speaker's voice from the prompt while attempting to apply the requested text, revealing whether the emotion from the reference audio "leaks" into the generated output.
 
-#### 2. Parler-TTS (Mini-Expresso)
+#### 2. Chatterbox Turbo 🚀
+* **Control Method:** Same as the base Chatterbox model (Audio Prompt).
+* **Methodology:** An optimized, faster variant of the Chatterbox architecture. We evaluate it alongside the base model to observe if the increase in inference speed introduces any trade-offs in emotional expressiveness or voice cloning accuracy.
+
+#### 3. Parler-TTS (Mini-Expresso)
 * **Control Method:** Driven entirely by natural language style descriptions (Text-Prompted).
 * **Methodology:** Instead of reference audio, we crafted specific descriptive prompts to dictate the speaker's identity and emotional state. 
     * *Example Description:* `"Gary's voice is angry and aggressive, with high energy and a loud tone, with a very close recording that almost has no background noise."`
@@ -34,16 +38,17 @@ The goal of this experiment is to evaluate the 3D Controllability (Speaker × Em
 To assess the computational efficiency of these models during inference, we calculated the Real-Time Factor (RTF). A lower RTF indicates faster generation speed relative to the length of the output audio.
 
 *Hardware: Evaluated on an NVIDIA GPU using PyTorch (`cuda` device).*
-*Note: The first generation run for Chatterbox (Cold Start) was excluded from this calculation to provide an accurate representation of sustained inference speed.*
+*Note: The first generation run for Chatterbox variants (Cold Start) was excluded from this calculation to provide an accurate representation of sustained inference speed.*
 
 | Model | Architecture Type | Control Method | RTF (Mean) | RTF (Std. Dev.) |
 | :--- | :--- | :--- | :---: | :---: |
+| **Chatterbox Turbo** | Voice Cloning | Audio Prompt | **0.2834** | ± 0.0175 |
 | **Chatterbox TTS** | Voice Cloning | Audio Prompt | **0.5312** | ± 0.0183 |
 | **Parler-TTS (Mini-Expresso)** | Autoregressive | Text Prompt | **1.1724** | ± 0.0104 |
 
 **Insights:**
-* **Speed:** Chatterbox operates significantly faster (roughly 2x) than Parler-TTS Mini-Expresso in our environment.
-* **Stability:** Both models exhibit high stability across varying lengths and emotional complexities, with Parler-TTS showing exceptionally low variance (Std: 0.01) in inference times.
+* **Speed Breakthrough:** **Chatterbox Turbo** is the clear winner in efficiency, operating nearly **2x faster** than the base Chatterbox model and **~4x faster** than Parler-TTS Mini-Expresso.
+* **Stability:** All models exhibit impressive stability across varying lengths and emotional complexities. Despite its massive speed boost, the Turbo model maintains a tight standard deviation (± 0.0175), comparable to the heavier models. Parler-TTS shows exceptionally low variance (Std: 0.01) in inference times.
 
 ---
 
